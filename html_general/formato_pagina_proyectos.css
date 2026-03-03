@@ -1,0 +1,51 @@
+/* HTML comtleto de la pagina de proyectos, con su barra de navegacion y barra lateral, ademas de un iframe para mostrar los proyectos de adobe. */
+body {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: auto 1fr;
+  gap: 10px;
+  padding: 10px;
+  height: 100vh;
+  margin: 0;
+  overflow: hidden;
+}
+/* es el css para la barra de arriva de la pagina */
+.navegador {
+  grid-column: span 6;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.navegador img {
+  max-width: 100%;
+  height: auto;
+}
+/* CSS para la barra del lado izquierdo de la pagina */
+.archivos {
+  grid-column: span 1;
+  grid-row: 2;
+  background-color: white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.archivos img {
+  max-width: 100%;
+  max-height: 100%;
+  height: auto;
+}
+
+/* Diseño responsive */
+@media (max-width: 992px) {
+  body {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .archivos {
+    grid-column: span 1;
+  }
+}
+/* No mover nada aqui, si no el formato se rompe  */
