@@ -1,39 +1,74 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Principal</title>
+    <title>Principal - Escritorio</title>
+    <link rel="stylesheet" href="principal.css">
 </head>
 <body>
-    <nav>
-        <img src="" alt="fondo">
-        <img src="" alt="Carpeta1">
-        <img src="" alt="Carpeta2">
-        <img src="" alt="Carpeta3">
-        <img src="" alt="Carpeta4">
-        <img src="" alt="Carpeta5">
-        <img src="" alt="Carpeta6">
-        <img src="" alt="Mi equipo">
-        <h1>Adobe</h1>
-        <h1>Programación</h1>
-        <h1>Electrónica</h1>
-        <h1>Desarrollo Web</h1>
-        <h1>Audiovisuales</h1>
-        <h1>Diseño 3D</h1>
-        <h1>Mi Equipo</h1>
-        <img src="" alt="fotoJO">
-        <img src="" alt="fotoA">
-        <img src="" alt="fotoJA">
-        <img src="" alt="fotoRE">
-        <img src="" alt="Internet">
-        <img src="" alt="Volumen">
-        <img src="" alt="Pila">
-        <img src="" alt="window">
-        <h1>8:31 p.m.</h1>
-        <h1>01/02/2026</h1>
 
-    </nav>
-    
+    <div class="monitor-frame">
+        <main id="escritorio">
+            <div class="overlay-lineas"></div>
+            <img src="imagenes_proyectos/fondos/Fondo_principal.jpeg" alt="fondo" class="wallpaper">
+
+            <div class="grid-iconos">
+                <div class="icono">
+                    <img src="imagenes_proyectos/" alt="Adobe">
+                    <p>Adobe</p>
+                </div>
+                <div class="icono">
+                    <img src="carpeta2.png" alt="Programación">
+                    <p>Programación</p>
+                </div>
+                <div class="icono">
+                    <img src="carpeta3.png" alt="Electrónica">
+                    <p>Electrónica</p>
+                </div>
+                <div class="icono">
+                    <img src="carpeta4.png" alt="Desarrollo Web">
+                    <p>Desarrollo Web</p>
+                </div>
+                <div class="icono">
+                    <img src="carpeta5.png" alt="Audiovisuales">
+                    <p>Audiovisuales</p>
+                </div>
+                <div class="icono">
+                    <img src="carpeta6.png" alt="Diseño 3D">
+                    <p>Diseño 3D</p>
+                </div>
+                
+                <div class="icono mi-equipo">
+                    <img src="mi_equipo.png" alt="Mi equipo">
+                    <p>Mi Equipo</p>
+                </div>
+            </div>
+
+            <footer class="barra-tareas">
+                <div class="inicio">
+                    <img src="logo_windows.png" alt="window">
+                </div>
+                
+                <div class="fotos-usuarios">
+                    <img src="fotoJO.png" alt="fotoJO">
+                    <img src="fotoA.png" alt="fotoA">
+                    <img src="fotoJA.png" alt="fotoJA">
+                    <img src="fotoRE.png" alt="fotoRE">
+                </div>
+
+                <div class="sistema-iconos">
+                    <img src="internet.png" alt="Internet">
+                    <img src="volumen.png" alt="Volumen">
+                    <img src="pila.png" alt="Pila">
+                    <div class="reloj-fecha">
+                        <span id="reloj-mini">8:31 p.m.</span>
+                        <span id="fecha-mini">01/02/2026</span>
+                    </div>
+                </div>
+            </footer>
+        </main>
+    </div>
+
 </body>
 </html>
