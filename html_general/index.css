@@ -1,0 +1,88 @@
+body {
+    background-color: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* El borde lila de la captura */
+.marco-externo {
+    border: 3px solid #b4a7bd;
+    border-radius: 18px;
+    padding: 8px;
+    background-color: #1a1a1a;
+}
+
+#bloqueo-pantalla {
+    position: relative;
+    width: 500px;
+    height: 350px;
+    border: 2px solid #3b3141;
+    border-radius: 10px;
+    overflow: hidden;
+    background-color: #000;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+}
+
+/* Las líneas negras ahora van AL FONDO */
+.lineas-v {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        90deg,
+        transparent,
+        transparent 30px,
+        #000 31px,
+        #000 34px
+    );
+    z-index: 1; /* Nivel más bajo */
+}
+
+/* La imagen va EN MEDIO */
+.fondo-img {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* Para que no se corte el dibujo */
+    z-index: 2; /* Encima de las líneas */
+}
+
+/* El texto va HASTA ARRIBA */
+.interfaz-texto {
+    position: relative;
+    z-index: 3; /* Nivel más alto */
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px 0;
+    pointer-events: none; /* Permite hacer clic a través del texto */
+}
+
+h1 {
+    color: white;
+    font-size: 4.5rem;
+    font-family: Arial, sans-serif;
+    margin: 0;
+    font-weight: 300;
+}
+
+.mensaje-footer {
+    color: white;
+    font-size: 0.8rem;
+    font-family: sans-serif;
+    margin: 0;
+    opacity: 0.9;
+}

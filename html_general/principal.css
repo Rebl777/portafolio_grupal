@@ -1,0 +1,125 @@
+body {
+    background-color: #1a1a1a;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    font-family: 'Tahoma', sans-serif; /* Estilo XP */
+}
+
+.monitor-frame {
+    border: 6px solid #b4a7bd;
+    border-radius: 15px;
+    padding: 5px;
+    background-color: #1a1a1a;
+}
+
+#escritorio {
+    position: relative;
+    width: 800px;
+    height: 600px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+}
+
+.wallpaper {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    z-index: 1;
+}
+
+/* Las líneas verticales semitransparentes */
+.overlay-lineas {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background: repeating-linear-gradient(
+        90deg,
+        rgba(255, 255, 255, 0.1),
+        rgba(255, 255, 255, 0.1) 40px,
+        rgba(0, 0, 0, 0.2) 41px,
+        rgba(0, 0, 0, 0.2) 43px
+    );
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Contenedor de iconos */
+.grid-iconos {
+    position: relative;
+    z-index: 3;
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 20px;
+    padding: 40px;
+}
+
+.icono {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: white;
+    text-shadow: 1px 1px 2px black;
+}
+
+.icono img {
+    width: 60px;
+    margin-bottom: 5px;
+    transition: transform 0.2s;
+}
+
+.icono img:hover {
+    transform: scale(1.1);
+    cursor: pointer;
+}
+
+.mi-equipo {
+    position: absolute;
+    bottom: 80px;
+    left: 40px;
+}
+
+/* Barra de tareas */
+.barra-tareas {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 45px;
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(5px);
+    z-index: 4;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 10px;
+    box-sizing: border-box;
+}
+
+.fotos-usuarios img {
+    width: 30px;
+    height: 30px;
+    border-radius: 50%;
+    margin: 0 2px;
+    border: 1px solid #fff;
+}
+
+.sistema-iconos {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.sistema-iconos img { width: 18px; }
+
+.reloj-fecha {
+    display: flex;
+    flex-direction: column;
+    font-size: 10px;
+    color: #333;
+    font-weight: bold;
+}
