@@ -12,19 +12,26 @@ body { /* Css del body del iframe */
 }
 /* Son las imagenes de los proyectos, con su titulo y descripcion */
 .imagen_proyecto {
-    height: 200px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 12px;
-    overflow: hidden;
-}
-.imagen_proyecto img {
-    max-width: 100%;
-    max-height: 100%;
-    object-fit: contain;
+    display: block;
+    text-decoration: none;
+    color: black;
 }
 
+.imagen_proyecto img {
+    width: 100%;
+    display: block;
+    border-radius: 8px;
+}
+
+/* Título */
+.imagen_proyecto::after {
+    content: attr(data-titulo) "\A" attr(data-descripcion);
+    white-space: pre-line;
+    display: block;
+    margin-top: 8px;
+}
+
+/* Diseño responsive */
 @media (max-width: 992px) {
     .proyectos {
         grid-template-columns: repeat(2, 1fr);
