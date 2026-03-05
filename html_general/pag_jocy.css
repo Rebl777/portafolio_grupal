@@ -1,0 +1,118 @@
+body {
+    background-color: #C1786F;
+    margin: 0;
+    font-family: 'Segoe UI', Tahoma, Verdana, sans-serif;
+    color: #333;
+}
+
+.contenedor_principal {
+    width: 95%;
+    max-width: 1400px;
+    margin: auto;
+}
+
+.header_jocy {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 60px;
+    gap: 40px;
+}
+
+#perfil_pag_jocy {
+    width: 230px;
+    border-radius: 50%;
+    margin-left: 40px;
+}
+
+.info_jocy {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+}
+
+.redes_jocy {
+    display: flex;
+    gap: 15px;
+    background-color: #FFF8F8;
+    padding: 12px 20px;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+.redes_jocy img {
+    width: 45px;
+    height: 45px;
+    object-fit: contain;
+}
+
+.texto_jocy {
+    background-color: #FFF8F8;
+    padding: 25px 40px;
+    border-radius: 20px;
+    text-align: right;
+    font-size: 1.1rem;
+    line-height: 1.6;
+    width: 65%;
+}
+
+.descripcion_jocy {
+    margin-top: 60px;
+    width: 100%;
+}
+
+.texto_jocy_gen {
+    background-color: #FFF8F8;
+    border-radius: 20px;
+    padding: 40px;
+    font-size: 1.15rem;
+    line-height: 1.8;
+    text-align: justify;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.galeria_jocy {
+    display: flex;
+    justify-content: space-between;
+    gap: 40px;
+    margin-top: 60px;
+    width: 100%;
+}
+
+.fav_jocy {
+    width: 32%;
+    height: 350px;
+    border-radius: 20px;
+    object-fit: cover;
+}
+
+
+@media (max-width: 900px) {
+
+    .header_jocy {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    .info_jocy {
+        align-items: center;
+    }
+
+    .texto_jocy {
+        width: 100%;
+        text-align: center;
+    }
+
+    .galeria_jocy {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .fav_jocy {
+        width: 90%;
+        height: 280px;
+    }
+}
