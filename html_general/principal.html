@@ -1,39 +1,44 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Principal</title>
+    <title>Principal - Escritorio</title>
+    <link rel="stylesheet" href="principal.css">
 </head>
 <body>
-    <nav>
-        <img src="" alt="fondo">
-        <img src="" alt="Carpeta1">
-        <img src="" alt="Carpeta2">
-        <img src="" alt="Carpeta3">
-        <img src="" alt="Carpeta4">
-        <img src="" alt="Carpeta5">
-        <img src="" alt="Carpeta6">
-        <img src="" alt="Mi equipo">
-        <h1>Adobe</h1>
-        <h1>Programación</h1>
-        <h1>Electrónica</h1>
-        <h1>Desarrollo Web</h1>
-        <h1>Audiovisuales</h1>
-        <h1>Diseño 3D</h1>
-        <h1>Mi Equipo</h1>
-        <img src="" alt="fotoJO">
-        <img src="" alt="fotoA">
-        <img src="" alt="fotoJA">
-        <img src="" alt="fotoRE">
-        <img src="" alt="Internet">
-        <img src="" alt="Volumen">
-        <img src="" alt="Pila">
-        <img src="" alt="window">
-        <h1>8:31 p.m.</h1>
-        <h1>01/02/2026</h1>
 
-    </nav>
-    
+    <div class="monitor-externo">
+        <main id="escritorio">
+            <div class="overlay-lineas"></div>
+            <img class="wallpaper" src="/imagenes_proyectos/fondos/Fondo_principal.jpeg" alt="fondo">
+
+            <div class="iconos-container">
+                <div class="item-escritorio"><img src="imagenes_proyectos/principal/adobe.jpeg"><span>Adobe</span></div>
+                <div class="item-escritorio"><img src="imagenes_proyectos/principal/programacion.jpeg"><span>Programación</span></div>
+                <div class="item-escritorio"><img src="imagenes_proyectos/principal/electronica.jpeg"><span>Electrónica</span></div>
+                <div class="item-escritorio"><img src="imagenes_proyectos/principal/desarrollo.jpeg"><span>Desarrollo Web</span></div>
+                <div class="item-escritorio"><img src="imagenes_proyectos/principal/audiovisuales.jpeg"><span>Audiovisuales</span></div>
+                <div class="item-escritorio"><img src="imagenes_proyectos/principal/3d.jpeg"><span>Diseño 3D</span></div>
+                
+                <div class="item-escritorio mi-equipo">
+                    <img src="imagenes_proyectos/principal/escuela_dos.jpeg"><span>Mi Equipo</span>
+                </div>
+            </div>
+
+            <footer class="barra-tareas">
+                <div class="seccion-inicio">
+                    <img src="imagenes_proyectos/principal/logo_windows.png" class="win-btn">
+                </div>
+                <div class="usuarios">
+                    <img src="imagenes_proyectos/fotos_perfil/perfil_jocy.jpeg"><img src="imagenes_proyectos/fotos_perfil/perfil_alex.jpg"><img src="imagenes_proyectos/fotos_perfil/perfil_jade.jpeg"><img src="imagenes_proyectos/fotos_perfil/perfil_re.jpeg">
+                </div>
+                <div class="sistema">
+                    <img src="imagenes_proyectos/principal/wifi.png"><img src="imagenes_proyectos/principal/volumen.png"><img src="imagenes_proyectos/principal/bateria.png">
+                    <div class="reloj-mini">8:31 p.m.<br>01/02/2026</div>
+                </div>
+            </footer>
+        </main>
+    </div>
+
 </body>
 </html>
