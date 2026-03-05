@@ -1,125 +1,149 @@
-body {
-    background-color: #1a1a1a;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    height: 100vh;
+/* 1. Reset para ocupar toda la pantalla */
+* {
     margin: 0;
-    font-family: 'Tahoma', sans-serif; /* Estilo XP */
+    padding: 0;
+    box-sizing: border-box;
 }
 
-.monitor-frame {
-    border: 6px solid #b4a7bd;
-    border-radius: 15px;
-    padding: 5px;
-    background-color: #1a1a1a;
+body, html {
+    width: 100%;
+    height: 100%;
+    overflow: hidden; /* Evita scrolls innecesarios */
+    background-color: #000;
 }
 
+/* 2. El contenedor principal al 100% */
 #escritorio {
     position: relative;
-    width: 800px;
-    height: 600px;
-    overflow: hidden;
+    width: 100vw;
+    height: 100vh;
     display: flex;
     flex-direction: column;
 }
 
-.wallpaper {
+/* 3. Fondo de pantalla que cubre todo */
+.fondo-pantalla {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover;
+    object-fit: cover; /* Clave para que el fondo no se deforme */
     z-index: 1;
 }
 
-/* Las líneas verticales semitransparentes */
-.overlay-lineas {
+/* Líneas de efecto retro (Scanlines) */
+.lineas-v-fondo {
     position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
     height: 100%;
     background: repeating-linear-gradient(
         90deg,
-        rgba(255, 255, 255, 0.1),
-        rgba(255, 255, 255, 0.1) 40px,
-        rgba(0, 0, 0, 0.2) 41px,
-        rgba(0, 0, 0, 0.2) 43px
+        transparent,
+        transparent 39px,
+        rgba(0, 0, 0, 0.1) 40px
     );
     z-index: 2;
     pointer-events: none;
 }
 
-/* Contenedor de iconos */
-.grid-iconos {
+/* 4. Contenedor de Iconos (Carpetas) */
+.iconos-container {
     position: relative;
     z-index: 3;
+    padding: 30px;
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    /* Crea columnas automáticas de 120px */
+    grid-template-columns: repeat(auto-fill, minmax(120px, 1fr));
+    grid-template-rows: repeat(auto-fill, 110px);
     gap: 20px;
-    padding: 40px;
+    height: calc(100vh - 50px); /* Resta el espacio de la barra de tareas */
 }
 
-.icono {
+.item-escritorio {
     display: flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     color: white;
-    text-shadow: 1px 1px 2px black;
-}
-
-.icono img {
-    width: 60px;
-    margin-bottom: 5px;
-    transition: transform 0.2s;
-}
-
-.icono img:hover {
-    transform: scale(1.1);
+    font-family: 'Tahoma', sans-serif; /* Estilo clásico */
+    font-size: 13px;
+    text-shadow: 1px 1px 3px black;
     cursor: pointer;
 }
 
-.mi-equipo {
-    position: absolute;
-    bottom: 80px;
-    left: 40px;
+/* Tamaño de las carpetas */
+.item-escritorio img {
+    width: 70px; 
+    height: auto;
+    margin-bottom: 5px;
+    transition: transform 0.1s;
 }
 
-/* Barra de tareas */
+.item-escritorio:hover img {
+    transform: scale(1.05);
+}
+
+/* 5. Posicionamiento específico de "Mi Equipo" */
+.mi-equipo {
+    position: absolute;
+    bottom: 30px; /* Separado de la barra de tareas */
+    left: 30px;
+}
+
+/* 6. Barra de Tareas Gris */
 .barra-tareas {
     position: absolute;
     bottom: 0;
+    left: 0;
     width: 100%;
-    height: 45px;
-    background: rgba(255, 255, 255, 0.7);
-    backdrop-filter: blur(5px);
-    z-index: 4;
+    height: 50px;
+    background: #d4d0c8; /* Gris clásico de Windows */
+    border-top: 2px solid #ffffff;
+    z-index: 10;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    padding: 0 10px;
-    box-sizing: border-box;
+    padding: 0 15px;
 }
 
-.fotos-usuarios img {
-    width: 30px;
-    height: 30px;
+.win-btn {
+    height: 35px;
+    cursor: pointer;
+}
+
+.usuarios {
+    display: flex;
+    gap: 8px;
+}
+
+.usuarios img {
+    width: 35px;
+    height: 35px;
     border-radius: 50%;
-    margin: 0 2px;
-    border: 1px solid #fff;
+    border: 1px solid #888;
+    object-fit: cover;
 }
 
-.sistema-iconos {
+.sistema {
     display: flex;
     align-items: center;
-    gap: 10px;
+    gap: 15px;
 }
 
-.sistema-iconos img { width: 18px; }
+.sistema img {
+    width: 22px;
+    height: auto;
+}
 
-.reloj-fecha {
-    display: flex;
-    flex-direction: column;
-    font-size: 10px;
+.reloj-mini {
+    font-size: 11px;
     color: #333;
     font-weight: bold;
+    text-align: center;
+    border-left: 1px solid #999;
+    padding-left: 10px;
+    line-height: 1.2;
 }

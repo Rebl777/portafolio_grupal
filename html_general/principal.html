@@ -2,69 +2,39 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Principal - Escritorio</title>
     <link rel="stylesheet" href="principal.css">
 </head>
 <body>
 
-    <div class="monitor-frame">
+    <div class="monitor-externo">
         <main id="escritorio">
             <div class="overlay-lineas"></div>
             <img class="wallpaper" src="/imagenes_proyectos/fondos/Fondo_principal.jpeg" alt="fondo">
 
-            <div class="grid-iconos">
-                <div class="icono">
-                    <img src="imagenes_proyectos/" alt="Adobe">
-                    <p>Adobe</p>
-                </div>
-                <div class="icono">
-                    <img src="carpeta2.png" alt="Programación">
-                    <p>Programación</p>
-                </div>
-                <div class="icono">
-                    <img src="carpeta3.png" alt="Electrónica">
-                    <p>Electrónica</p>
-                </div>
-                <div class="icono">
-                    <img src="carpeta4.png" alt="Desarrollo Web">
-                    <p>Desarrollo Web</p>
-                </div>
-                <div class="icono">
-                    <img src="carpeta5.png" alt="Audiovisuales">
-                    <p>Audiovisuales</p>
-                </div>
-                <div class="icono">
-                    <img src="carpeta6.png" alt="Diseño 3D">
-                    <p>Diseño 3D</p>
-                </div>
+            <div class="iconos-container">
+                <div class="item-escritorio"><img src="imagenes_proyectos/principal/adobe.jpeg"><span>Adobe</span></div>
+                <div class="item-escritorio"><img src="imagenes_proyectos/principal/programacion.jpeg"><span>Programación</span></div>
+                <div class="item-escritorio"><img src="imagenes_proyectos/principal/electronica.jpeg"><span>Electrónica</span></div>
+                <div class="item-escritorio"><img src="imagenes_proyectos/principal/desarrollo.jpeg"><span>Desarrollo Web</span></div>
+                <div class="item-escritorio"><img src="imagenes_proyectos/principal/audiovisuales.jpeg"><span>Audiovisuales</span></div>
+                <div class="item-escritorio"><img src="imagenes_proyectos/principal/3d.jpeg"><span>Diseño 3D</span></div>
                 
-                <div class="icono mi-equipo">
-                    <img src="mi_equipo.png" alt="Mi equipo">
-                    <p>Mi Equipo</p>
+                <div class="item-escritorio mi-equipo">
+                    <img src="imagenes_proyectos/principal/escuela_dos.jpeg"><span>Mi Equipo</span>
                 </div>
             </div>
 
             <footer class="barra-tareas">
-                <div class="inicio">
-                    <img src="logo_windows.png" alt="window">
+                <div class="seccion-inicio">
+                    <img src="imagenes_proyectos/principal/logo_windows.png" class="win-btn">
                 </div>
-                
-                <div class="fotos-usuarios">
-                    <img src="fotoJO.png" alt="fotoJO">
-                    <img src="fotoA.png" alt="fotoA">
-                    <img src="fotoJA.png" alt="fotoJA">
-                    <img src="fotoRE.png" alt="fotoRE">
+                <div class="usuarios">
+                    <img src="imagenes_proyectos/fotos_perfil/perfil_jocy.jpeg"><img src="imagenes_proyectos/fotos_perfil/perfil_alex.jpg"><img src="imagenes_proyectos/fotos_perfil/perfil_jade.jpeg"><img src="imagenes_proyectos/fotos_perfil/perfil_re.jpeg">
                 </div>
-
-                <div class="sistema-iconos">
-                    <img src="internet.png" alt="Internet">
-                    <img src="volumen.png" alt="Volumen">
-                    <img src="pila.png" alt="Pila">
-                    <div class="reloj-fecha">
-                        <span id="reloj-mini">8:31 p.m.</span>
-                        <span id="fecha-mini">01/02/2026</span>
-                    </div>
+                <div class="sistema">
+                    <img src="imagenes_proyectos/principal/wifi.png"><img src="imagenes_proyectos/principal/volumen.png"><img src="imagenes_proyectos/principal/bateria.png">
+                    <div class="reloj-mini">8:31 p.m.<br>01/02/2026</div>
                 </div>
             </footer>
         </main>
