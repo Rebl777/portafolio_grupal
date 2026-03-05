@@ -24,11 +24,13 @@ body { /* Css del body del iframe */
     box-shadow: 0 10px 20px rgba(0,0,0,0.15);
 }
 .imagen_proyecto img {
+    background-color: #f2f2f2;
     width: 100%;
+    height: 200px;
+    object-fit: contain;
     display: block;
     border-radius: 8px;
 }
-
 .titulo{
     font-size: 18px;
     font-family: Arial, "sans-serif";
