@@ -38,6 +38,26 @@ body {
   height: auto;
 }
 
+/* Hacer boton de salir encima de la imagen */
+.boton_salir {
+  border: none;
+  background-color: #CCDEEC;
+  position: absolute;
+  top: 11px;
+  right: 15px;
+  width: 30px;
+  height: 30px;
+}
+.boton_salir:hover {
+  background-color: red;
+  color: white;
+  border: none;
+  width: 30px;
+  height: 30px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
 /* Diseño responsive */
 @media (max-width: 992px) {
   body {
