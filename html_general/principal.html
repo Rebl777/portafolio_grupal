@@ -1,44 +1,95 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
+  <head>
+    <meta charset="UTF-8" />
     <title>Principal - Escritorio</title>
-    <link rel="stylesheet" href="principal.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="principal.css" />
+  </head>
+  <body>
     <div class="monitor-externo">
-        <main id="escritorio">
-            <div class="overlay-lineas"></div>
-            <img class="wallpaper" src="imagenes_proyectos/fondos/Fondo_principal.jpeg" alt="fondo">
+      <main id="escritorio">
+        <div class="overlay-lineas"></div>
+        <!-- <img class="wallpaper" src="imagenes_proyectos/fondos/Fondo_principal.jpeg" alt="fondo"> -->
+        <!-- Se cambió a fondo de pantalla con CSS para evitar problemas de escalado y posición -->
 
-            <div class="iconos-container">
-                <div class="item-escritorio"><img src="imagenes_proyectos/principal/adobe.png"><span>Adobe</span></div>
-                <div class="item-escritorio"><img src="imagenes_proyectos/principal/programacion.png"><span>Programación</span></div>
-                <div class="item-escritorio"><img src="imagenes_proyectos/principal/electronica.png"><span>Electrónica</span></div>
-                <div class="item-escritorio"><img src="imagenes_proyectos/principal/desarrollo.png"><span>Desarrollo Web</span></div>
-                <div class="item-escritorio"><img src="imagenes_proyectos/principal/audiovisuales.png"><span>Audiovisuales</span></div>
-                <div class="item-escritorio"><img src="imagenes_proyectos/principal/3d.png"><span>Diseño 3D</span></div>
-                
-                <div class="item-escritorio mi-equipo">
-                    <img src="imagenes_proyectos/principal/escuela_dos.png"><span>Mi Equipo</span>
-                </div>
-            </div>
+        <div class="iconos-container">
+          <div class="item-escritorio">
+            <a href="./adobe.html" class="pagina_materia"
+              ><img src="imagenes_proyectos/principal/adobe.png" /><span
+                >Adobe</span
+              ></a
+            >
+          </div>
+          <div class="item-escritorio">
+            <a href="./programacion.html" class="pagina_materia"
+              ><img src="imagenes_proyectos/principal/programacion.png" /><span
+                >Programación</span
+              ></a
+            >
+          </div>
+          <div class="item-escritorio">
+            <a href="./electronica.html" class="pagina_materia"
+              ><img src="imagenes_proyectos/principal/electronica.png" /><span
+                >Electrónica</span
+              ></a
+            >
+          </div>
+          <div class="item-escritorio">
+            <a href="./desarrollo.html" class="pagina_materia"
+              ><img src="imagenes_proyectos/principal/desarrollo.png" /><span
+                >Desarrollo Web</span
+              ></a
+            >
+          </div>
+          <div class="item-escritorio">
+            <a href="./audiovisuales.html" class="pagina_materia"
+              ><img src="imagenes_proyectos/principal/audiovisuales.png" /><span
+                >Audiovisuales</span
+              ></a
+            >
+          </div>
+          <div class="item-escritorio">
+            <a href="./diseno3d.html" class="pagina_materia"
+              ><img src="imagenes_proyectos/principal/3d.png" /><span
+                >Diseño 3D</span
+              ></a
+            >
+          </div>
 
-            <footer class="barra-tareas">
-                <div class="seccion-inicio">
-                    <img src="imagenes_proyectos/principal/logo_windows.png" class="win-btn">
-                </div>
-                <div class="usuarios">
-                    <img src="imagenes_proyectos/fotos_perfil/perfil_jocy.jpeg"><img src="imagenes_proyectos/fotos_perfil/perfil_alex.jpg"><img src="imagenes_proyectos/fotos_perfil/perfil_jade.jpeg"><img src="imagenes_proyectos/fotos_perfil/perfil_re.jpeg">
-                </div>
-                <div class="sistema">
-                    <img src="imagenes_proyectos/principal/wifi.png"><img src="imagenes_proyectos/principal/volumen.png"><img src="imagenes_proyectos/principal/bateria.png">
-                    <div class="reloj-mini">8:31 p.m.<br>01/02/2026</div>
-                </div>
-            </footer>
-        </main>
+          <div class="item-escritorio mi-equipo">
+            <a
+              href="https://palmore.edu.mx/"
+              class="pagina_materia"
+              id="pagina_escuela"
+            >
+              <img src="imagenes_proyectos/principal/escuela_dos.png" /><span
+                >Mi Equipo</span
+              >
+            </a>
+          </div>
+        </div>
+
+        <footer class="barra-tareas">
+          <div class="seccion-inicio">
+            <img
+              src="imagenes_proyectos/principal/logo_windows.png"
+              class="win-btn"
+            />
+          </div>
+          <div class="usuarios">
+            <a href="./pag_joce.html" class="pagina_materia"><img src="imagenes_proyectos/fotos_perfil/perfil_jocy.jpeg" /></a>
+            <a href="./redes_alex.html" class="pagina_materia"><img src="imagenes_proyectos/fotos_perfil/perfil_alex.jpg"/></a>
+            <a href="./pag_jade.html" class="pagina_materia"><img src="imagenes_proyectos/fotos_perfil/perfil_jade.jpeg" /></a>
+            <a href="./pag_rebe.html" class="pagina_materia"><img src="imagenes_proyectos/fotos_perfil/perfil_re.jpeg"/></a>
+          </div>
+          <div class="sistema">
+            <img src="imagenes_proyectos/principal/wifi.png" /><img
+              src="imagenes_proyectos/principal/volumen.png"
+            /><img src="imagenes_proyectos/principal/bateria.png" />
+            <div class="reloj-mini">8:31 p.m.<br />01/02/2026</div>
+          </div>
+        </footer>
+      </main>
     </div>
-
-</body>
+  </body>
 </html>

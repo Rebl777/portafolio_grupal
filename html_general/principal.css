@@ -14,23 +14,41 @@ body, html {
 
 /* 2. El contenedor principal al 100% */
 #escritorio {
+    background-image: url("imagenes_proyectos/fondos/Fondo_principal.jpeg"); /* Se cambió a esta forma ya que la otra forma daba error */
     position: relative;
     width: 100vw;
-    height: 100vh;
+    height: 100vh   ;
     display: flex;
     flex-direction: column;
+    background-size: cover;        /* Hace que la imagen llene toda la pantalla */
+    background-position: center;   /* Centra la imagen */
+    background-repeat: no-repeat;  /* Evita que se repita */
+}
+.pagina_materia{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    color: white;
+}
+
+.item-escritorio:hover{ /*Se le puso una animacion de seleccion al solo pasar el mouse */
+    background: rgba(49,106,197,0.4);
+    border: 1px dotted white;
+    border-radius: 3px;
+    padding: 3px;
 }
 
 /* 3. Fondo de pantalla que cubre todo */
-.fondo-pantalla {
+/* .fondo-pantalla {
     position: absolute;
     top: 0;
     left: 0;
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Clave para que el fondo no se deforme */
+    object-fit: cover; /* Clave para que el fondo no se deforme 
     z-index: 1;
-}
+} */
 
 /* Líneas de efecto retro (Scanlines) */
 .lineas-v-fondo {
@@ -146,4 +164,14 @@ body, html {
     border-left: 1px solid #999;
     padding-left: 10px;
     line-height: 1.2;
+}
+
+.usuarios img,
+.sistema img {
+    transition: transform 0.15s;
+}
+
+.usuarios img:hover,
+.sistema img:hover {
+    transform: translateY(-3px);
 }
