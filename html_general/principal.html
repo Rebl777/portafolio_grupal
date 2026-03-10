@@ -2,43 +2,50 @@
 <html lang="es">
 <head>
     <meta charset="UTF-8">
-    <title>Principal - Escritorio</title>
+    <title>Portafolio XP - Rebeca Bolivar</title>
     <link rel="stylesheet" href="principal.css">
 </head>
 <body>
 
     <div class="monitor-externo">
         <main id="escritorio">
-            <div class="overlay-lineas"></div>
-            <img class="wallpaper" src="imagenes_proyectos/fondos/Fondo_principal.jpeg" alt="fondo">
-
             <div class="iconos-container">
-                <div class="item-escritorio"><img src="imagenes_proyectos/principal/adobe.jpeg"><span>Adobe</span></div>
-                <div class="item-escritorio"><img src="imagenes_proyectos/principal/programacion.jpeg"><span>Programación</span></div>
-                <div class="item-escritorio"><img src="imagenes_proyectos/principal/electronica.jpeg"><span>Electrónica</span></div>
-                <div class="item-escritorio"><img src="imagenes_proyectos/principal/desarrollo.jpeg"><span>Desarrollo Web</span></div>
-                <div class="item-escritorio"><img src="imagenes_proyectos/principal/audiovisuales.jpeg"><span>Audiovisuales</span></div>
-                <div class="item-escritorio"><img src="imagenes_proyectos/principal/3d.jpeg"><span>Diseño 3D</span></div>
-                
-                <div class="item-escritorio mi-equipo">
-                    <img src="imagenes_proyectos/principal/escuela_dos.jpeg"><span>Mi Equipo</span>
-                </div>
+                <div class="item-escritorio" onclick="location.href='adobe.html'"><img src="imagenes_proyectos/principal/adobe.jpeg"><span>Adobe</span></div>
+                <div class="item-escritorio" onclick="location.href='programacion.html'"><img src="imagenes_proyectos/principal/programacion.jpeg"><span>Programación</span></div>
+                <div class="item-escritorio" onclick="location.href='electronica.html'"><img src="imagenes_proyectos/principal/electronica.jpeg"><span>Electrónica</span></div>
+                <div class="item-escritorio" onclick="location.href='desarollo.html'"><img src="imagenes_proyectos/principal/desarrollo.jpeg"><span>Desarrollo Web</span></div>
+                <div class="item-escritorio" onclick="location.href='audiovisuales.html'"><img src="imagenes_proyectos/principal/audiovisuales.jpeg"><span>Audiovisuales</span></div>
+                <div class="item-escritorio" onclick="location.href='diseno3d.html'"><img src="imagenes_proyectos/principal/3d.jpeg"><span>Diseño 3D</span></div>
+            </div>
+
+            <div class="item-escritorio mi-equipo" onclick="window.open('https://palmore.edu.mx/universidad/', '_blank')">
+                <img src="imagenes_proyectos/principal/escuela_dos.jpeg"><span>Mi Equipo</span>
             </div>
 
             <footer class="barra-tareas">
                 <div class="seccion-inicio">
                     <img src="imagenes_proyectos/principal/logo_windows.png" class="win-btn">
                 </div>
+
                 <div class="usuarios">
-                    <img src="imagenes_proyectos/fotos_perfil/perfil_jocy.jpeg"><img src="imagenes_proyectos/fotos_perfil/perfil_alex.jpg"><img src="imagenes_proyectos/fotos_perfil/perfil_jade.jpeg"><img src="imagenes_proyectos/fotos_perfil/perfil_re.jpeg">
+                    <img src="imagenes_proyectos/fotos_perfil/nueva_perfil_jocy.jpg" onclick="location.href='pag_joce.html'">
+                    <img src="imagenes_proyectos/fotos_perfil/foto_jade_2.jpeg" onclick="location.href='pag_jade.html'">
+                    <img src="imagenes_proyectos/fotos_perfil/perfil_alex.jpg" onclick="location.href='pag_alex.html'">
+                    <img src="imagenes_proyectos/fotos_perfil/perfil_re.jpeg" onclick="location.href='pag_rebe.html'" class="perfil-activo">
                 </div>
+
                 <div class="sistema">
-                    <img src="imagenes_proyectos/principal/wifi.png"><img src="imagenes_proyectos/principal/volumen.png"><img src="imagenes_proyectos/principal/bateria.png">
-                    <div class="reloj-mini">8:31 p.m.<br>01/02/2026</div>
+                    <div class="iconos-tray">
+                        <img src="imagenes_proyectos/principal/wifi.png" class="tray-icon">
+                        <img src="imagenes_proyectos/principal/volumen.png" class="tray-icon">
+                        <img src="imagenes_proyectos/principal/bateria.png" class="tray-icon">
+                    </div>
+                    <div id="reloj-barra" class="reloj-mini">00:00 p.m.<br>05/03/2026</div>
                 </div>
             </footer>
         </main>
     </div>
 
+    <script src="script_principal.js"></script>
 </body>
 </html>
