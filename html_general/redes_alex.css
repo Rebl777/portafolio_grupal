@@ -170,7 +170,7 @@ p {
     position: absolute;
     bottom: 0;
     left: 0;
-    width: 100%;
+    width: 99%;
     height: 50px;
     background: #d4d0c8; /* Gris clásico de Windows */
     border-top: 2px solid #ffffff;

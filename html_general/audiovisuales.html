@@ -15,13 +15,24 @@
         class="barra_nav"
       />
     </div>
-    <div class="archivos">
+    <!-- <div class="archivos">
       <img
         src="./imagenes_proyectos/fondos/barra_lateral.jpg"
         alt="Barra lateral"
         class="archivos"
       />
+    </div> -->
+    
+    <div class="archivos">
+      <a class="carpetas" href="./adobe.html">📁 Adobe</a>
+      <a class="carpetas" href="./audiovisuales.html">🎬 Audiovisuales</a>
+      <a class="carpetas" href="./diseno3d.html">🧊 Diseño 3D</a>
+      <a class="carpetas" href="./electronica.html">🔌 Electronica</a>
+      <a class="carpetas" href="./desarrollo.html">💻 Desarrollo</a>
+      <a class="carpetas" href="./programacion.html">🧠 Programación</a>
+      <a class="carpetas" href="https://palmore.edu.mx/">🎓 Mi universidad</a>
     </div>
+    
     <iframe src="proyectos_audiovisual.html"></iframe><!-- Copia el archivo, cambia el nombre del archivo, y añade los proyectos con su nombre y descripción -->
     
     <footer class="barra-tareas">
@@ -39,10 +50,12 @@
         <a href="./pag_jade.html" class="pagina_materia"><img src="imagenes_proyectos/fotos_perfil/perfil_jade.jpeg" /></a>
         <a href="./pag_rebe.html" class="pagina_materia"><img src="imagenes_proyectos/fotos_perfil/perfil_re.jpeg"/></a>
       </div>
-      <div class="sistema">
-        <div class="reloj-mini">8:31 p.m.<br />01/02/2026</div>
-      </div>
-    </footer>
+    <div class="sistema">
+      <div class="reloj-mini" id="reloj-mini"></div>
+    </div>
+  </footer> 
+  
+  <script src="javascript/reloj.js"></script>
   </body>
 </html>
 <!-- No mover nada aqui, si no el formato se rompe -->
