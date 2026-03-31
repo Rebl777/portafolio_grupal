@@ -1,6 +1,7 @@
 .proyectos_galeria {
     width: 90%;
     margin: 5% auto;
+    position: relative;
 }
 .proyecto_personal {
     width: 100%;
@@ -8,18 +9,18 @@
     display: block;
 }
 .ver_mas {
-    margin-top: 2%;
+    position: absolute;
+    bottom: 5%;
+    right: 5%;
     background: rgba(0,0,0,0.6);
     color: white;
     border: none;
     padding: 2% 4%;
     border-radius: 8px;
     font-size: 3.5vw;
-    cursor: pointer;
 }
 .oculto {
     display: none;
-    margin-top: 2%;
     font-size: 3.5vw;
     text-align: justify;
 }
