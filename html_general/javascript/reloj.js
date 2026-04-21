@@ -1,24 +1,14 @@
-function updateClock(){
-    const now = new Date();
-    let hours = now.getHours();
-    let minutes = now.getMinutes();
-    let seconds = now.getSeconds();
-    let dia = now.getDate();
-    let mes = now.getMonth() + 1;
-    let año = now.getFullYear();
+function actualizarHora() {
+    const ahora = new Date();
 
-    hours = hours < 10 ? '0' + hours : hours;
-    minutes = minutes < 10 ? '0' + minutes : minutes;
-    seconds = seconds < 10 ? '0' + seconds : seconds;
-    dia = dia < 10 ? '0' + dia : dia;
-    mes = mes < 10 ? '0' + mes : mes;
-    año = año < 10 ? '0' + año : año;
+    let horas = ahora.getHours();
+    let minutos = ahora.getMinutes();
 
-    const time = `${hours}:${minutes}:${seconds}`;
-    const date = `${dia}/${mes}/${año}`;
-    document.getElementById('reloj-mini').innerHTML = `${time} <br> ${date}`;
+    horas = horas < 10 ? "0" + horas : horas;
+    minutos = minutos < 10 ? "0" + minutos : minutos;
+
+    document.getElementById("hora_phone").textContent = `${horas}:${minutos}`;
 }
 
-setInterval(updateClock, 1000);
-
-updateClock();
+setInterval(actualizarHora, 1000);
+actualizarHora();
