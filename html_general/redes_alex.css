@@ -1,16 +1,15 @@
 body{
     background-color: #79747E;
     margin: 0;
-    height: 100vh;
+    min-height: 100vh; /* corregido */
 
     display: flex;
     justify-content: center;
     align-items: flex-start;
 
     padding-top: 20px;
-    overflow: hidden;
+    overflow: auto; /* corregido */
     font-family: 'Poppins', sans-serif;
-
 }
 
 h1 {
@@ -34,7 +33,7 @@ p {
     gap: 20px;
 
     width: 90vw;
-    height: 90vh;
+    min-height: 90vh; /* corregido */
     margin: 0;
     padding: 30px;
 
@@ -51,7 +50,7 @@ p {
 .usuario {
     grid-column: 1 / 3;
     display: grid;
-    grid-template-columns: 220px 1fr;
+    grid-template-columns: minmax(150px, 220px) 1fr; /* mejor responsive */
     gap: 20px;
     align-items: center;
 }
@@ -97,7 +96,6 @@ p {
 
 .sobre_mi {
     grid-column: 1 / 3;
-    background-color:  #958e9c;
 }
 
 .experiencia_laboral {
@@ -108,34 +106,89 @@ p {
 .botones {
     display: flex;
     gap: 20px;
-    margin-top: 30px;
     justify-content: center;
 }
 
-.botonesredes {
-    width: 120px;
-    height: 100px;
-    border-radius: 50px;
-    border: none;
-    background-color: #d9d9d9;
+.container{
+    width: 900px;
+    margin: 40px auto 0;
     display: flex;
-    gap: 20px;
-    /* margin-top: 10%; */
-    /* margin-left: 10%; */
     justify-content: center;
-    align-items: center;
+    perspective: 1000px; /* agregado */
+}
+
+.container .box{
+    border-radius: 10px;
+    position: relative;
+    width: 300px;
+    height: 100px;
+    box-sizing: border-box;
+    text-align: center;
+    margin: 0 10px;
+}
+
+.container .box .icon{
+    border-radius: 10px;
+    width: 100%;
+    height: 100%;
+    background: #b9aec4;
+    transition: 0.5s;
+    transform-origin: top;
+    transform: translateY(0) rotateX(0deg);
+}
+
+.container .box:hover .icon{
+    transform: translateY(100%) rotateX(90deg);
+}
+
+.container .box .icon img{
+    width: 50px;
+    height: 50px;
+    margin-top: 25px;
+}
+
+.container .box .details{
+    border-radius: 10px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: #89848d;
+    transition: 0.5s;
+    transform-origin: bottom;
+    transform: translateY(-100px) rotateX(-90deg);
+}
+
+.container .box:hover .details{
+    transform: translateY(0) rotateX(0deg);
+}
+
+.container .box .details h3{
+    margin: 0; 
+    padding: 0;
+    line-height: 100px;
+    font-size: 24px;
+    font-weight: 500;
+    color: black;
+}
+a{
+    text-decoration: none;
+}
+
+.container .box:nth-child(2) .details{
+    background: #89848d;
+}
+
+.container .box:nth-child(3) .details{
+    background: #89848d ;
+}
+
+button{
+    border: none;
+    outline: none;
+    background: none;
     cursor: pointer;
-    transition: all 0.2s ease;
-}
-
-.botonesredes img {
-    width: 60px;
-    height: 60px;
-}
-
-.botonesredes:hover {
-    transform: translateY(-4px);
-    background-color: white;
 }
 
 .proyectos {
@@ -146,7 +199,7 @@ p {
 }
 
 .contenedor_proyecto {
-    height: 40%;
+    height: 250px;
     width: 100%;
     border-radius: 20px;
     overflow: hidden;
@@ -158,86 +211,23 @@ p {
     object-fit: cover;
 }
 
-#vectorizado img {
-    object-position: center top;
-}
+#vectorizado img,
 #tetris img {
     object-position: center top;
 }
 
-/* footer */
-.barra-tareas {
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    width: 99%;
-    height: 50px;
-    background: #d4d0c8; /* Gris clásico de Windows */
-    border-top: 2px solid #ffffff;
-    z-index: 10;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 0 15px;
-}
-
-.win-btn {
-    height: 35px;
-    cursor: pointer;
-}
-
-.usuarios {
-    display: flex;
-    gap: 8px;
-}
-
-.usuarios img {
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    border: 1px solid #888;
-    object-fit: cover;
-}
-
-.sistema {
-    display: flex;
-    align-items: center;
-    gap: 15px;
-}
-
-.sistema img {
-    width: 22px;
-    height: auto;
-}
-
-.reloj-mini {
-    font-size: 11px;
-    color: #333;
-    font-weight: bold;
-    text-align: center;
-    border-left: 1px solid #999;
-    padding-left: 10px;
-    line-height: 1.2;
-}
-
-.usuarios img,
-.sistema img {
-    transition: transform 0.15s;
-}
-
-.usuarios img:hover,
-.sistema img:hover {
-    transform: translateY(-3px);
-}
-
+/* BOTÓN */
 #btnAtras {
+    top: 30px;
+    left: 73px;
+    position: absolute;
     display: flex;
     justify-content: center;
     align-items: center;
     width: 40px;
     height: 40px;
     border: none;
-    background-color: #d9d9d9;
+    background-color: #b9aec4;
     border-radius: 50px;
     cursor: pointer;
     font-family: 'Poppins', sans-serif;
@@ -263,25 +253,31 @@ p {
     .parent {
         grid-template-columns: repeat(2, 1fr);
         height: auto;
-        overflow: auto;
     }
 
-    .usuario {
-        grid-column: 1 / 3;
-    }
-
-    .experiencia_laboral {
-        grid-column: 1 / 3;
-        grid-row: auto;
-    }
-
-    .sobre_mi {
+    .usuario,
+    .experiencia_laboral,
+    .sobre_mi,
+    .proyectos {
         grid-column: 1 / 3;
     }
 
     .proyectos {
-        grid-column: 1 / 3;
         grid-template-columns: repeat(2, 1fr);
+    }
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        padding: 10px;
+        justify-content: center;
+        align-items: center;
+    }
+    .container .box {
+        width: 400px;
+    }
+    #btnAtras{
+        left: 20px;
     }
 
 }
@@ -305,7 +301,6 @@ p {
     }
 
     .usuario {
-        grid-column: 1;
         grid-template-columns: 1fr;
         text-align: center;
     }
@@ -315,40 +310,35 @@ p {
     }
 
     .info {
+        align-items: center;
         grid-column: auto;
         grid-row: auto;
-        align-items: center;
-    }
-
-    .experiencia_laboral {
-        grid-column: 1;
-    }
-
-    .sobre_mi {
-        grid-column: 1;
     }
 
     .proyectos {
-        grid-column: 1;
         grid-template-columns: 1fr;
     }
 
     .botones {
-        justify-content: center;
         flex-wrap: wrap;
     }
+
     .contenedor_proyecto {
-        height: 100%;
-        width: 100%;
-        border-radius: 20px;
-        overflow: hidden;
+        height: 200px;
     }
 
-    .contenedor_proyecto img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
+    .container{
+        display: flex;
+        flex-direction: column;
+        gap: 30px;
+        justify-content: start;
+        align-items: start;
     }
 
-
-} 
+    .container .box {
+        width: 450px;
+    }
+    #btnAtras{
+        left: 10px;
+    }
+}
