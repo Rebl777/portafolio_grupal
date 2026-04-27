@@ -17,10 +17,12 @@ proyectos.forEach(proyecto => {
         modalDesc.textContent = oculto;
 
         modal.showModal();
+        document.body.classList.add("no-scroll");
     });
 });
 
 // cerrar modal
 modal.querySelector(".cerrar").addEventListener("click", () => {
     modal.close();
+    document.body.classList.remove("no-scroll");
 });
