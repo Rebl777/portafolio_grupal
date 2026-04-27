@@ -1,3 +1,4 @@
+@media (max-width: 700px) {
 #fondo_principal {
     position: relative;
     height: 100vh;
@@ -66,4 +67,5 @@ nav {
 }
 body {
     margin: 0%;
+}
 }

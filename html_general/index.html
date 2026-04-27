@@ -5,9 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bloqueo de Pantalla</title>
     <link rel="stylesheet" href="index.css">
+    <link rel="stylesheet" href="./styles/diseño_responsive.css">
+    <link rel="stylesheet" href="./index_phone.css">
 </head>
 <body>
-
+    <div class="computadora">
     <div class="marco-externo" id="pantalla-clic">
         
         <img src="imagenes_proyectos/fondos/Fondo.png" alt="Fondo" class="fondo-img">
@@ -18,8 +20,28 @@
         </div>
 
     </div>
+    </div>
+    
+  <!-- ------------------------------------------- -->
+  <!-- --------------CELULAR---------------------- -->
+  <!-- ------------------------------------------- -->
 
-    <audio id="sonido-clic" src="https://www.soundjay.com/buttons/button-20.mp3"></audio>
+  <div class="celular">
+    
+    <div id="bloqueo_de_pantalla">
+        <h1 id="hora_phone">00:00</h1>
+
+        <a href="./principal.html">
+            <img src="./imagenes_proyectos/fondos/fondo_phone.jpg" alt="Fondo" class="fondo_phone">
+        </a>
+
+        <h2 id="texto_bloqueo">Click para desbloquear</h2>
+    </div>
+    
+</div>
+
+    <!-- Aquí conectas tu JavaScript -->
+    <script src="javascript/reloj.js"></script>
     <script src="index.js"></script>
 </body>
 </html>

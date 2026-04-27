@@ -8,10 +8,8 @@ function actualizarReloj() {
 
 // Lógica de desbloqueo
 function iniciarDesbloqueo() {
-    const sonido = document.getElementById('sonido-clic');
     const marco = document.querySelector('.marco-externo');
     
-    sonido.play().catch(() => {});
     
     // Animación 
     marco.style.transition = "transform 0.6s ease, opacity 0.6s ease";
@@ -19,7 +17,7 @@ function iniciarDesbloqueo() {
     marco.style.opacity = "0";
 
     setTimeout(() => {
-        window.location.href = 'principal.html';
+        window.location.href = './principal.html';
     }, 500);
 }
 

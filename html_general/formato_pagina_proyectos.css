@@ -1,5 +1,13 @@
+/* Eliminar formato por defecto del body */
+body{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: sans-serif;
+}
+
 /* HTML comtleto de la pagina de proyectos, con su barra de navegacion y barra lateral, ademas de un iframe para mostrar los proyectos de adobe. */
-body {
+.computadora {
   background-color: #edf5f8;
   display: grid;
   grid-template-columns: repeat(6, 1fr);
@@ -59,7 +67,7 @@ body {
   background-color: #edf5f8;
 }
 
-iframe {
+.tabla_proyectos {
   grid-column: span 5;
   grid-row: 2;
   width: 100%;
