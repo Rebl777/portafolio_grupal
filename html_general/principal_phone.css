@@ -40,9 +40,10 @@
 .apps_abajo {
     position: absolute;
     bottom: 5%;
-    width: 85%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
+    padding: 10% 10%;
 }
 .div_princi, .div_princi_dos {
     display: flex;
