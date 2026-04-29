@@ -6,6 +6,7 @@ body {
     grid-template-columns: 70% 20% 10%;
     grid-template-rows: auto auto auto;
     height: 100vh;
+    background-color: #ffffff;
     
     #fondo{
         grid-column: 1/4;
@@ -54,6 +55,9 @@ body {
         grid-row: 1/3;
         align-self: center;
         justify-self: center;
+        background-color: #99a2c3c2;
+        border-radius: 10px;
+        padding: 20px;
         
     }
     #contactos_jade{
@@ -62,16 +66,47 @@ body {
         background: rgb(160, 160, 160), transparent;
         display: grid;
         grid-template-rows: 50% 50%;
-        #telefono{
+        align-items: center;
+        cursor: pointer;
+        justify-content: center;
+        
+
+        #contenedor_tele{
             grid-row: 1/2;
-            align-self:self-end;
-            margin: 15px;
-            justify-self: right;
+            overflow: hidden;
+            height: 100px;
+            width: 85px;
+            #telefono{
+                align-self:self-end;
+                margin: 5px;
+                justify-self: right;
+                border-radius: 10%;
+            }
+            #numero{
+                margin-left: 5px;
+                color: #d4d0c8;
+                opacity: 0;
+                font-weight: 700;
+                transition: all 0.5s ease;
+            }
         }
-        #correo{
+        #contenedor_corre{
             grid-row: 2/3;
-            margin: 15px;
-            justify-self: right;
+            overflow: hidden;
+            height: 100px;
+            width: 86px;
+            #correo{
+                margin: 15px;
+                justify-self: right;
+                border-radius: 10%;
+            }
+            #corre{
+                margin-left: 10px;
+                color: #d4d0c8;
+                opacity: 0;
+                font-weight: 700;
+                transition: all 0.5s ease;
+            }
         }
     }
     #proyectos_jade{
@@ -79,27 +114,19 @@ body {
         grid-row: 3/4;
         align-items: center;
         justify-items: center;
+        
     }
-    #correo_flotante{
-        grid-row: 1/4;
-        grid-column: 1/4;
-        background-color: aliceblue;
-        margin: 10px;
-        justify-self: center;
-        align-self: center;
-        background-color: rgb(41, 41, 41);
-        margin: 6%;
-        border-radius: 10px;
-        border-color: rgb(169, 169, 169);
-        border: 1px solid;
-        box-shadow: 10px 10px 5px rgba(21, 29, 45, 0.45);
-        padding: 10px;
-        color: rgb(194, 207, 221);
-    }
+
 }
 .redes_jade{
-    width: 35px;
-    height: 30px;
+    position: relative;
+    padding: 1px;
+    width: 60px;
+    height: 55px;
+    background-color: #ffffff;
+    border-radius:10%;
+    box-shadow: 0 0 5px #000;
+    transition: all 0.5s ease;
 }
 .proyecto_jade_pc{
     width: 30%;
@@ -107,6 +134,7 @@ body {
     margin: 1%;
     align-items: center;
     justify-items: center;
+    border-radius: 10px;
 }
 .oculto{
     display: none;
@@ -210,4 +238,21 @@ body {
 #btnAtras:hover {
     background-color: white;
     transform: translateY(-2px);
+}
+
+#telefono:hover{
+    background-color: rgb(231, 226, 255);
+    box-shadow: 0 0 15px rgba(255, 0, 217, 0.858),0 0 30px ;
+}
+#numero:hover{
+    opacity: 1;
+    transform: translateX(0);
+}
+#corre:hover{
+    opacity: 1;
+    transform: translateX(0);
+}
+#correo:hover{
+    background-color: rgb(231, 226, 255);
+    box-shadow: 0 0 15px rgba(255, 0, 0, 0.858),0 0 30px ;
 }
