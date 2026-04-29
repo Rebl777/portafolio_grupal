@@ -4,6 +4,7 @@ let salida = document.getElementById("salida") ;
 let pagina_completa = document.getElementById("pagina_completa");
 
 function entrar (){
+
     correo_flotante.classList.remove("oculto");
     pagina_completa.classList.add("oculto");
 }
@@ -12,6 +13,10 @@ function salir (){
     correo_flotante.classList.add("oculto");
     pagina_completa.classList.remove("oculto");
 }
+
+document.getElementById("btnAtras").addEventListener("click", function() {
+    history.back();
+});
 
 correo.addEventListener("click", entrar);
 salida.addEventListener("click", salir);

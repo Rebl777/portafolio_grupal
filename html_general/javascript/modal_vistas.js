@@ -10,17 +10,19 @@ proyectos.forEach(proyecto => {
     proyecto.addEventListener("click", function() {
         let img = proyecto.querySelector("img");
         let titulo = proyecto.querySelector(".titulo").textContent;
-        let descripcion = proyecto.querySelector(".descripcion").textContent;
+        let oculto = proyecto.querySelector(".oculto").textContent;
 
         modalImg.src = img.src;
         modalTitulo.textContent = titulo;
-        modalDesc.textContent = descripcion;
+        modalDesc.textContent = oculto;
 
         modal.showModal();
+        document.body.classList.add("no-scroll");
     });
 });
 
 // cerrar modal
 modal.querySelector(".cerrar").addEventListener("click", () => {
     modal.close();
+    document.body.classList.remove("no-scroll");
 });
