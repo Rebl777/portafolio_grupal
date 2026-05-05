@@ -1,3 +1,7 @@
+document.getElementById("btnAtras").addEventListener("click", function() {
+    history.back();
+});l
+
 let correo = document.getElementById("correo");
 let correo_flotante = document.getElementById("correo_flotante");
 let salida = document.getElementById("salida") ;
@@ -13,10 +17,6 @@ function salir (){
     correo_flotante.classList.add("oculto");
     pagina_completa.classList.remove("oculto");
 }
-
-document.getElementById("btnAtras").addEventListener("click", function() {
-    history.back();
-});
 
 correo.addEventListener("click", entrar);
 salida.addEventListener("click", salir);

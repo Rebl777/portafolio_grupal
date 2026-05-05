@@ -21,12 +21,8 @@
                     <a href="https://www.instagram.com/jocy_06?igsh=MXZqOTV1bTNqODhnZQ==" target="_blank">
                         <img src="imagenes_proyectos/chats/logo_insta.png" alt="App 2">
                     </a>
-                    <a href="mailto:jocelynporras06@gmail.com" target="_blank">
-                        <img src="imagenes_proyectos/redes/correo_icon.png" alt="App 3">
-                    </a>
-                    <a href="tel:6141045082" target="_blank">
-                        <img src="imagenes_proyectos/redes/telefono_icon.png" alt="App 4">
-                    </a>
+                    <img src="imagenes_proyectos/redes/correo_icon.png" alt="App 3" onclick="abrirModal('modalCorreo')">
+                    <img src="imagenes_proyectos/redes/telefono_icon.png" alt="App 4" onclick="abrirModal('modalTelefono')">
                 </div>
 
                 <p class="texto_jocy">
@@ -52,7 +48,25 @@
             <img class="fav_jocy" src="imagenes_proyectos/audiovisual/video_animación_img.png">
         </div>
     </div>
+    <div id="modalCorreo" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal('modalCorreo')">&times;</span>
+        <h2>Contacto</h2>
+        <p>Este es mi correo:</p>
+        <p class="dato">jocelynporras06@gmail.com</p>
+    </div>
+    </div>
+
+    <div id="modalTelefono" class="modal">
+    <div class="modal-contenido">
+        <span class="cerrar" onclick="cerrarModal('modalTelefono')">&times;</span>
+        <h2>Contacto</h2>
+        <p>Este es mi número:</p>
+        <p class="dato">614 104 5082</p>
+    </div>
+    </div>
   
   <script src="javascript/atras.js"></script>
+  <script src="pag_joce.js"></script>
 </body>
 </html>

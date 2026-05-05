@@ -1,24 +1,50 @@
 body {
     background-color: #000;
+    margin: 0;
 }
-#pagina_completa{
+
+#pagina_completa {
     display: grid;
-    grid-template-columns: 70% 20% 10%;
-    grid-template-rows: auto auto auto;
+    grid-template-columns: 10% 40% 50%;
+    grid-template-rows: 10% 40% 50%;
     height: 100vh;
     background-color: #ffffff;
-    
-    #fondo{
+
+    #botonatras {
+        grid-column: 1/2;
+        grid-row: 1/2;
+        z-index: 10;
+        align-self: start;
+        justify-self: start;
+        padding: 10px;
+    }
+
+    #btnAtras {
+        background: rgb(245, 245, 245);
+        border: none;
+        cursor: pointer;
+        padding: 0;
+        img {
+            width: 35px;
+            height: 20px;
+            filter: drop-shadow(2px 2px 2px rgba(0,0,0,0.6));
+        }
+    }
+
+    #fondo {
         grid-column: 1/4;
         grid-row: 1/4;
         height: 100%;
         width: 100%;
+        object-fit: cover;
     }
-    #nombre{
+
+    #nombre {
         grid-column: 2/3;
         grid-row: 1/2;
+        z-index: 2;
         font-size: 24px;
-        align-self:self-end;
+        align-self: end;
         justify-self: center;
         color: whitesmoke;
         text-align: center;
@@ -30,113 +56,172 @@ body {
         font-weight: bold;
         margin: 10px;
     }
-    #foto{
-        width: 200px;
+
+    #foto {
+        width: 225px;
         height: 250px;
         grid-row: 2/3;
         grid-column: 2/3;
-        border-radius: 100%;
-        border: 2px solid aliceblue;
-        
+        z-index: 2;
+        border-radius: 50%;
+        border: 2px solid rgba(240, 248, 255, 0.488);
         justify-self: center;
+        object-fit: cover;
         margin: 10px;
     }
-    #descripcion{
+
+    #descripcion {
         color: rgb(255, 255, 255);
         font-size: 16px;
         text-align: center;
-        font-family: Verdana, sans-serif;
+        font-family:'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         letter-spacing: 1px;
         line-height: 1.6;
-        text-shadow: 3px 3px 10px rgba(0,0,0,0.7);
+        text-shadow: .5px .5px 2px rgba(0,0,0,0.7);
         -webkit-text-stroke: .5px black;
         font-weight: bold;
-        grid-column: 1/2;
-        grid-row: 1/3;
-        align-self: center;
+        grid-column: 2/3;
+        grid-row: 3/4;
+    
+        align-self:baseline;
         justify-self: center;
         background-color: #99a2c3c2;
         border-radius: 10px;
         padding: 20px;
-        
     }
-    #contactos_jade{
-        grid-column: 3/4;
+
+    #contactos_jade {
+        grid-column: 1/2;
         grid-row: 2/3;
-        background: rgb(160, 160, 160), transparent;
-        display: grid;
-        grid-template-rows: 50% 50%;
+        display: flex;
+        flex-direction: column;
         align-items: center;
-        cursor: pointer;
         justify-content: center;
-        
-
-        #contenedor_tele{
-            grid-row: 1/2;
-            overflow: hidden;
-            height: 100px;
-            width: 85px;
-            #telefono{
-                align-self:self-end;
-                margin: 5px;
-                justify-self: right;
-                border-radius: 10%;
-            }
-            #numero{
-                margin-left: 5px;
-                color: #d4d0c8;
-                opacity: 0;
-                font-weight: 700;
-                transition: all 0.5s ease;
-            }
-        }
-        #contenedor_corre{
-            grid-row: 2/3;
-            overflow: hidden;
-            height: 100px;
-            width: 86px;
-            #correo{
-                margin: 15px;
-                justify-self: right;
-                border-radius: 10%;
-            }
-            #corre{
-                margin-left: 10px;
-                color: #d4d0c8;
-                opacity: 0;
-                font-weight: 700;
-                transition: all 0.5s ease;
-            }
-        }
+        gap: 16px;
     }
-    #proyectos_jade{
-        grid-column: 1/4;
-        grid-row: 3/4;
+
+    #proyectos_jade {
+        grid-column: 3/4;
+        grid-row: 1/4;
+        z-index: 2;
+        display: grid;
+        grid-template-rows: 30% 30%  30% ;
+        grid-template-columns: 100%;
         align-items: center;
-        justify-items: center;
-        
+        justify-content: center;
+        #pro1{
+            grid-row: 1/2;
+            width: 80%;
+            height: 80%;
+            align-self: center;
+            justify-self: center;
+        }
+        #pro2{
+            grid-row: 2/3;
+            width: 80%;
+            height: 80%;
+            align-self: center;
+            justify-self: center;
+        }
+        #pro3{
+            grid-row: 3/4;
+            width: 80%;
+            height: 80%;
+            align-self: center;
+            justify-self: center;
+        }
     }
+}
 
-}
-.redes_jade{
+/* Contenedores de contacto — efecto expansión */
+#contenedor_tele,
+#contenedor_corre {
     position: relative;
-    padding: 1px;
     width: 60px;
-    height: 55px;
-    background-color: #ffffff;
-    border-radius:10%;
-    box-shadow: 0 0 5px #000;
-    transition: all 0.5s ease;
+    height: 60px;
+    background: rgba(255, 255, 255, 0.95);
+    border-radius: 16px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    padding: 0 10px;
+    overflow: hidden;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    cursor: pointer;
+    box-shadow:
+        0 8px 32px rgba(0, 0, 0, 0.1),
+        0 4px 16px rgba(0, 0, 0, 0.05),
+        inset 0 1px 0 rgba(255, 255, 255, 0.8),
+        inset 0 -1px 0 rgba(0, 0, 0, 0.1);
 }
-.proyecto_jade_pc{
-    width: 30%;
+
+#contenedor_tele::before,
+#contenedor_corre::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 50%;
+    background: linear-gradient(180deg, rgba(255,255,255,0.3) 0%, transparent 100%);
+    border-radius: 16px 16px 0 0;
+    pointer-events: none;
+}
+
+#contenedor_tele .redes_jade,
+#contenedor_corre .redes_jade {
+    width: 48px;
+    height: 48px;
+    border-radius: 8px;
+    flex-shrink: 0;
+    z-index: 2;
+    position: relative;
+    box-shadow: none;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+#numero,
+#corre {
+    margin: 0 0 0 10px;
+    opacity: 0;
+    font-weight: 600;
+    font-size: 8px;
+    white-space: nowrap;
+    transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+    transform: translateX(-10px);
+    color: #333;
+    font-family: Verdana, sans-serif;
+}
+
+
+#contenedor_tele:hover,
+#contenedor_corre:hover {
+    width: 190px;
+    transform: translateY(-3px) scale(1.02);
+    box-shadow:
+        0 10px 50px rgba(255, 0, 217, 0.515),
+        0 8px 24px rgba(255, 0, 0, 0.563);
+}
+
+#contenedor_tele:hover #numero,
+#contenedor_corre:hover #corre {
+    opacity: 1;
+    transform: translateX(0);
+}
+
+#contenedor_tele:active,
+#contenedor_corre:active {
+    transform: translateY(-1px) scale(0.98);
+}
+
+.proyecto_jade_pc {
+    width: 80%;
     height: 70%;
     margin: 1%;
-    align-items: center;
-    justify-items: center;
     border-radius: 10px;
+    object-fit: cover;
+    border: .5px solid rgba(240, 248, 255, 0.247);
 }
-.oculto{
+
+.oculto {
     display: none;
 }
 
