@@ -30,8 +30,6 @@
 }
 .contenedor_img {
     position: relative;
-}
-.contenedor_img img {
     width: 100%;
     border-radius: 5%;
     display: block;
@@ -49,20 +47,24 @@
     display: block;
 }
 .descripciones_materias {
-    text-align: justify;
+    text-align: left;
     padding: 0 5%;
     font-size: 120%;
     margin-bottom: 10%;
 }
 .descripcion {
+    text-align: justify;
     font-size: 120%;
-    margin: 3% 0 0 0;
+    margin: 3% 0% 0% 0%;
 }
 .info {
+    text-align: justify;
     position: static;
     background: none;
     color: black;
-    padding: 3% 0;
+    padding: 3% 0% 2% 0%;
+    width: 90%;
+    margin: 0 auto;
 }
 .ver_mas_botones {
     position: absolute;
